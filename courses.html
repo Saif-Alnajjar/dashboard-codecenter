@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>الدورات - شيفرة كود</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">شيفرة كود</div>
+    <nav class="nav">
+      <a href="index.html">الرئيسية</a>
+      <a href="courses.html">الدورات</a>
+      <a href="portfolio.html">أعمالنا</a>
+      <a href="contact.html">تواصل</a>
+    </nav>
+    <button id="bookTop2" class="btn small">احجز دورة</button>
+  </header>
+
+  <main class="container">
+    <h1>الدورات</h1>
+    <p class="muted">اختار الدورة اللي تناسبك واضغط احجز الآن</p>
+
+    <section class="cards-grid" id="coursesGrid">
+      <!-- هنا الدورات يتم انشاؤها بواسطة JS -->
+    </section>
+  </main>
+
+  <!-- modal موجود في index.html لكن لن نكرر هنا - سنعتمد على نفس modal عبر script -->
+  <div id="modal" class="modal">
+    <div class="modal-box">
+      <h3>نموذج حجز دورة</h3>
+      <form id="bookingForm">
+        <input type="text" id="bname" placeholder="الاسم" required>
+        <input type="tel" id="bphone" placeholder="رقم الجوال" required>
+        <input type="email" id="bemail" placeholder="البريد الإلكتروني" required>
+        <select id="bcourse" required>
+          <option value="">اختر الدورة</option>
+        </select>
+        <div class="modal-actions">
+          <button type="submit" class="btn">ارسال</button>
+          <button type="button" id="closeModal" class="btn ghost">اغلاق</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 شيفرة كود</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
