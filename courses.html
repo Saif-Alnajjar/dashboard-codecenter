@@ -2,42 +2,45 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Courses</title>
+    <title>Courses | Code Center</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="navbar">
-  <a href="index.html">Home</a>
-  <a href="courses.html">Courses</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="contact.html">Contact</a>
-</div>
+<header>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="courses.html" class="active">Courses</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-<h2 class="title">Available Courses</h2>
+<section class="courses">
 
-<div class="courses">
-  <div class="card">
-    <h3>Frontend Development</h3>
-    <p>Learn HTML, CSS, JS from scratch</p>
-    <p>Duration: 4 Weeks</p>
-    <button onclick="location.href='booking.html'">Book Now</button>
-  </div>
+    <div class="card">
+        <h3>دورة HTML & CSS</h3>
+        <p>تعلم أساسيات بناء المواقع</p>
+        <span>المدة: أسبوعين</span>
+        <a class="btn" href="reserve.html">احجز الآن</a>
+    </div>
 
-  <div class="card">
-    <h3>Python Programming</h3>
-    <p>Learn Python basics and logic</p>
-    <p>Duration: 6 Weeks</p>
-    <button onclick="location.href='booking.html'">Book Now</button>
-  </div>
+    <div class="card">
+        <h3>JavaScript Basics</h3>
+        <p>برمجة الواجهة والتفاعل</p>
+        <span>المدة: أسبوعين</span>
+        <a class="btn" href="reserve.html">احجز الآن</a>
+    </div>
 
-  <div class="card">
-    <h3>Mobile Apps</h3>
-    <p>Intro to Flutter & Dart</p>
-    <p>Duration: 5 Weeks</p>
-    <button onclick="location.href='booking.html'">Book Now</button>
-  </div>
-</div>
+    <div class="card">
+        <h3>Frontend Web Development</h3>
+        <p>HTML - CSS - JS - GitHub</p>
+        <span>المدة: شهر</span>
+        <a class="btn" href="reserve.html">احجز الآن</a>
+    </div>
 
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
