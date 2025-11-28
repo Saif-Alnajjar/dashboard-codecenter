@@ -4,65 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الدورات - شيفرة كود</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            background: #f7f7f7;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .courses-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .course-card {
+            background: white;
+            padding: 18px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .course-card h3 {
+            margin: 0 0 10px;
+        }
+
+        .course-card p {
+            margin: 6px 0;
+        }
+
+        button {
+            margin-top: 12px;
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            border: none;
+            color: white;
+            border-radius: 6px;
+        }
+
+        button:hover {
+            background: #0056b3;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">الرئيسية</a>
-            <a href="courses.html">الدورات</a>
-            <a href="portfolio.html">أعمالنا</a>
-            <a href="contact.html">تواصل معنا</a>
-        </nav>
-    </header>
 
-    <section class="courses">
-        <h2>دوراتنا</h2>
-        <div class="course-cards">
-            <div class="course-card">
-                <h3>HTML & CSS</h3>
-                <p>تعلم أساسيات تصميم المواقع</p>
-                <p>المدة: 4 أسابيع</p>
-                <p>السعر: 500 ريال</p>
-                <button onclick="openBookingForm('HTML & CSS')">احجز الآن</button>
-            </div>
-            <div class="course-card">
-                <h3>JavaScript</h3>
-                <p>تعلم البرمجة التفاعلية للمواقع</p>
-                <p>المدة: 6 أسابيع</p>
-                <p>السعر: 800 ريال</p>
-                <button onclick="openBookingForm('JavaScript')">احجز الآن</button>
-            </div>
-            <div class="course-card">
-                <h3>React</h3>
-                <p>تطوير واجهات حديثة باستخدام React</p>
-                <p>المدة: 8 أسابيع</p>
-                <p>السعر: 1200 ريال</p>
-                <button onclick="openBookingForm('React')">احجز الآن</button>
-            </div>
-        </div>
+<h2>الدورات التدريبية المتاحة لدينا</h2>
 
-        <!-- نموذج الحجز -->
-        <div id="bookingFormContainer" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeBookingForm()">&times;</span>
-                <h3>احجز دورتك</h3>
-                <form id="bookingForm">
-                    <input type="text" id="name" placeholder="الاسم" required>
-                    <input type="tel" id="phone" placeholder="رقم الجوال" required>
-                    <input type="email" id="email" placeholder="البريد" required>
-                    <input type="text" id="course" readonly>
-                    <button type="submit">إرسال الحجز</button>
-                </form>
-            </div>
-        </div>
+<div class="courses-container">
 
-    </section>
+    <div class="course-card">
+        <h3>أساسيات البرمجة</h3>
+        <p>📌 وصف: دورة تعريفية للمبتدئين في البرمجة</p>
+        <p>⏳ المدة: 4 أسابيع</p>
+        <p>💲 السعر: 50$</p>
+        <button onclick="window.location.href='booking.html'">احجز الآن</button>
+    </div>
 
-    <footer>
-        <p>© 2025 شيفرة كود</p>
-    </footer>
+    <div class="course-card">
+        <h3>تطوير مواقع الويب</h3>
+        <p>📌 وصف: تعلم HTML, CSS, JavaScript لبناء مواقع كاملة</p>
+        <p>⏳ المدة: 8 أسابيع</p>
+        <p>💲 السعر: 100$</p>
+        <button onclick="window.location.href='booking.html'">احجز الآن</button>
+    </div>
 
-    <script src="js/main.js"></script>
+    <div class="course-card">
+        <h3>تصميم واجهات المستخدم UI/UX</h3>
+        <p>📌 وصف: أساسيات التصميم وتجربة المستخدم</p>
+        <p>⏳ المدة: 3 أسابيع</p>
+        <p>💲 السعر: 40$</p>
+        <button onclick="window.location.href='booking.html'">احجز الآن</button>
+    </div>
+
+    <div class="course-card">
+        <h3>JavaScript متقدم</h3>
+        <p>📌 وصف: تعلم مفاهيم متقدمة مثل DOM – API – Async </p>
+        <p>⏳ المدة: 5 أسابيع</p>
+        <p>💲 السعر: 70$</p>
+        <button onclick="window.location.href='booking.html'">احجز الآن</button>
+    </div>
+
+</div>
+
 </body>
 </html>
