@@ -4,44 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تواصل معنا - شيفرة كود</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            background: #f7f7f7;
+            padding: 20px;
+        }
+
+        .navbar {
+            background: #222;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        .navbar a:hover {
+            color: #00c3ff;
+        }
+
+        .page-content {
+            padding-top: 20px;
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .contacts p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
- <div class="navbar">
+
+<div class="navbar">
     <a href="index.html">الرئيسية</a>
     <a href="courses.html">الدورات</a>
     <a href="portfolio.html">أعمالنا</a>
     <a href="contact.html">تواصل معنا</a>
- </div>
-    <header>
-        <nav>
-            <a href="index.html">الرئيسية</a>
-            <a href="courses.html">الدورات</a>
-            <a href="portfolio.html">أعمالنا</a>
-            <a href="contact.html">تواصل معنا</a>
-        </nav>
-    </header>
+</div>
 
-    <section class="contact">
-        <h2>تواصل معنا</h2>
-        <form id="contactForm">
-            <input type="text" id="cname" placeholder="الاسم" required>
-            <input type="email" id="cemail" placeholder="البريد" required>
-            <textarea id="cmessage" placeholder="رسالتك" required></textarea>
-            <button type="submit">إرسال</button>
-        </form>
+<div class="page-content">
 
-        <div class="social-links">
-            <a href="https://www.instagram.com/code_.center" target="_blank">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-        </div>
-    </section>
+    <h2>تواصل معنا</h2>
 
-    <footer>
-        <p>© 2025 شيفرة كود</p>
-    </footer>
+    <div class="contacts">
+        <p>📸 Instagram: <a href="https://www.instagram.com/code_.center/" target="_blank">@code_.center</a></p>
+        <p>📞 WhatsApp: <a href="https://wa.me/972592323418" target="_blank">+972 59-232-3418</a></p>
+        <p>📧 Email : <a href="mailto:shifra.center@gmail.com">shifra.center@gmail.com</a></p>
+    </div>
 
-    <script src="js/main.js"></script>
+    <h3>أرسل لنا رسالة:</h3>
+    <form onsubmit="sendMessage(event)">
+        <input type="text" id="name" placeholder="الاسم الكامل" required>
+        <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+        <textarea id="message" rows="5" placeholder="رسالتك" required></textarea>
+        <button type="submit">إرسال</button>
+    </form>
+
+</div>
+
+<script>
+function sendMessage(event) {
+    event.preventDefault();
+    alert("تم إرسال الرسالة بنجاح 🤍");
+    document.querySelector("form").reset();
+}
+</script>
+
 </body>
 </html>
