@@ -176,3 +176,10 @@ footer {
 .navbar a:hover {
     color: #00c3ff;
 }
+.work-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 10px;
+}
