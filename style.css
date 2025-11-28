@@ -180,3 +180,12 @@ nav {
     padding: 15px;
     background: #f9f9f9;
 }
+header nav a {
+    display: inline-block;
+    margin: 0 18px;
+}
+.hero-img {
+    width: 100%;
+    max-height: 280px !important;
+    object-fit: cover;
+}
