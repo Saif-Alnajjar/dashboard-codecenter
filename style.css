@@ -184,3 +184,20 @@ footer {
     display: block;
     border-radius: 10px;
 }
+body {
+    margin: 0;
+}
+
+.page-content {
+    padding-top: 60px; /* يجعل المحتوى يظهر أسفل Navbar بدون تكرار */
+}
+
+.navbar {
+    position: fixed; /* أو sticky */
+    top: 0;
+    width: 100%;
+    background: #222;
+    padding: 12px;
+    text-align: center;
+    z-index: 1000;
+}
