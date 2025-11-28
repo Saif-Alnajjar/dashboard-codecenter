@@ -1,30 +1,57 @@
-function saveData(){
-  let name = document.getElementById("name").value;
-  let phone = document.getElementById("phone").value;
-  let email = document.getElementById("email").value;
-  let course = document.getElementById("course").value;
+let navLinks = document.querySelectorAll(".nav a");
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.forEach(a => a.classList.remove("active"));
+        link.classList.add("active");
+    });
+});
 
-  if(name == "" || phone == "" || email == ""){
-    alert("Please fill all fields");
-    return;
-  }
+let imgModal = document.getElementById("imgModal");
+let modalImg = document.getElementById("modalImg");
+let allImages = document.querySelectorAll(".portfolio img");
+let closeModal = document.getElementById("closeModal");
 
-  let booking = {
-    name: name,
-    phone: phone,
-    email: email,
-    course: course
-  }
+allImages.forEach(img => {
+    img.addEventListener("click", () => {
+        imgModal.style.display = "flex";
+        modalImg.src = img.src;
+    });
+});
 
-  let old = localStorage.getItem("bookings");
-  let arr = [];
+closeModal.addEventListener("click", ()=>{
+    imgModal.style.display = "none";
+});
 
-  if(old){
-    arr = JSON.parse(old);
-  }
+imgModal.addEventListener("click", (e)=>{
+    if(e.target === imgModal){
+        imgModal.style.display = "none";
+    }
+});
 
-  arr.push(booking);
-  localStorage.setItem("bookings", JSON.stringify(arr));
+let submitForm = document.getElementById("reserveForm");
 
-  alert("Booking submitted successfully!");
+if(submitForm){
+    submitForm.addEventListener("submit" , function(e){
+        e.preventDefault();
+
+        let name = document.getElementById("name").value;
+        let phone = document.getElementById("phone").value;
+        let email = document.getElementById("email").value;
+        let course = document.getElementById("courseSelect").value;
+
+        let booking = {
+            name: name,
+            phone: phone,
+            email: email,
+            course: course
+        };
+
+        let allBookings = JSON.parse(localStorage.getItem("bookings")) || [];
+        allBookings.push(booking);
+
+        localStorage.setItem("bookings" , JSON.stringify(allBookings));
+
+        alert("تم الحجز بنجاح ✔️");
+        submitForm.reset();
+    });
 }
