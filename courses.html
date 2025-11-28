@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدورات - شيفرة كود</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="courses.html">الدورات</a>
+            <a href="portfolio.html">أعمالنا</a>
+            <a href="contact.html">تواصل معنا</a>
+        </nav>
+    </header>
+
+    <section class="courses">
+        <h2>دوراتنا</h2>
+        <div class="course-cards">
+            <div class="course-card">
+                <h3>HTML & CSS</h3>
+                <p>تعلم أساسيات تصميم المواقع</p>
+                <p>المدة: 4 أسابيع</p>
+                <p>السعر: 500 ريال</p>
+                <button onclick="openBookingForm('HTML & CSS')">احجز الآن</button>
+            </div>
+            <div class="course-card">
+                <h3>JavaScript</h3>
+                <p>تعلم البرمجة التفاعلية للمواقع</p>
+                <p>المدة: 6 أسابيع</p>
+                <p>السعر: 800 ريال</p>
+                <button onclick="openBookingForm('JavaScript')">احجز الآن</button>
+            </div>
+            <div class="course-card">
+                <h3>React</h3>
+                <p>تطوير واجهات حديثة باستخدام React</p>
+                <p>المدة: 8 أسابيع</p>
+                <p>السعر: 1200 ريال</p>
+                <button onclick="openBookingForm('React')">احجز الآن</button>
+            </div>
+        </div>
+
+        <!-- نموذج الحجز -->
+        <div id="bookingFormContainer" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeBookingForm()">&times;</span>
+                <h3>احجز دورتك</h3>
+                <form id="bookingForm">
+                    <input type="text" id="name" placeholder="الاسم" required>
+                    <input type="tel" id="phone" placeholder="رقم الجوال" required>
+                    <input type="email" id="email" placeholder="البريد" required>
+                    <input type="text" id="course" readonly>
+                    <button type="submit">إرسال الحجز</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2025 شيفرة كود</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
