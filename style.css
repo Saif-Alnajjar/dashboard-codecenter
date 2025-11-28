@@ -21,6 +21,13 @@ header nav a:hover {
 }
 
 /* Hero */
+.hero-img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
 .hero {
     text-align: center;
     padding: 50px 20px;
